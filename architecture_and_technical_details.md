@@ -41,6 +41,12 @@ For the MVP, we use `shared_preferences` to store data as stringified JSON lists
 - **Serialization:** When a bookmark is saved, it is converted to a `Map` and then encoded to a JSON string.
 - **Deserialization:** On app load, the JSON strings are decoded back into `Bookmark` objects and sorted by timestamp (newest first).
 
+### 3. CI/CD & Automated Builds
+To circumvent local Android SDK requirements and ensure consistent builds, FindEasy uses **GitHub Actions** for Continuous Integration.
+- **Workflow:** `.github/workflows/build_apk.yml` automatically triggers on pushes to the `main` branch.
+- **Environment:** Sets up Java 17 and Flutter `stable` on an `ubuntu-latest` runner.
+- **Artifact:** Generates a release APK and uploads it as a workflow artifact, making it instantly downloadable for testing without needing a local build environment.
+
 ## Design System & Aesthetics
 - **Theme:** Clean, modern, and minimalist (Glassmorphism inspired).
 - **Colors:** Dominant colors include a very light grey/blue background (`#F5F7FA`), white cards, and vibrant blue accents (`#3B82F6`).

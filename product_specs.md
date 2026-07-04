@@ -32,6 +32,9 @@ FindEasy successfully captures shared content regardless of the app's lifecycle 
 ### 5. Offline Capabilities
 - **Local Storage:** All bookmarks are saved directly to the device's local storage. The app is fully functional offline (except for opening external URLs).
 
+### 6. Automated APK Builds
+- **GitHub Actions Integration:** FindEasy automatically builds a production-ready Android APK every time code is pushed to the repository. Users can easily download the latest version from the "Actions" tab on GitHub.
+
 ---
 
 ## Planned Future Features (Iterative Roadmap)
